@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import pe.edu.tecsup.springbootapp.beans.Calculadora;
+import pe.edu.tecsup.springbootapp.beans.Saludo;
 
 
 @SpringBootApplication
@@ -18,6 +19,9 @@ public class SpringBootAppCpeApplication implements CommandLineRunner{
 
 	@Autowired
 	private Calculadora calculadora;
+	
+	@Autowired
+	private Saludo saludo;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootAppCpeApplication.class, args);
@@ -30,6 +34,10 @@ public class SpringBootAppCpeApplication implements CommandLineRunner{
 		
 		Double resultado = calculadora.sumar(15.0, 5.0);
 		log.info("Resultado: " + resultado);
+		
+		log.info(saludo.dia("Jaime Gomez"));
+		
+		
 		
 	}
 
