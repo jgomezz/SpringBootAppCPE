@@ -1,8 +1,10 @@
 package pe.edu.tecsup.springbootapp.beans;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Primary
+@Component("SaludoEspanolImpl")
 public class SaludoImpl implements Saludo {
 
 	@Override
